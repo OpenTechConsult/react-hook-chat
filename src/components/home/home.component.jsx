@@ -12,13 +12,14 @@ const Home = () => {
     };
 
     return (
-        <div>
-            <h3>Choose a chat room</h3>
+        <div className="home-container">
+            <h3 className="room-title">Choose a chat room</h3>
             <input type="text"
                     placeholder="Room"
                     value={roomName}
-                    onChange={handleRoomNameChange} />
-            <Link to={`/${roomName}`}>Join room</Link>
+                    onChange={handleRoomNameChange}
+                    className="text-input-field" />
+            <Link to={`/${roomName}`} className="enter-room-button">Join room</Link>
         </div>
     );
 }
